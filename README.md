@@ -23,50 +23,69 @@ Tambien cabe destacar que se ha desarrollado una web de manera sencilla para pro
 
 5. Una vez que se ha lanzado el servidor ya podemos probar la API, la cual contiene los siguientes endpoints:
 
-## EndPoints:
+## EndPoints
 
-### Obtener la informacion de todos los lenguajes:
+### Obtener la información de todos los lenguajes
 
-GET http://localhost:{puerto}/api/languages
+```http
+GET http://localhost:{puerto}/languages
+```
 
 ### Obtener la informacion de un lenguaje con su id:
 
-GET http://localhost:{puerto}/api/languages/a9f87c4b-8e6d-4f5e-9c27-3a78e4d2b309
+```http
+GET http://localhost:{puerto}/languages/:id
+```
 
 ### Obtener la informacion de un lenguaje mediante su nombre:
 
-GET http://localhost:{puerto}/api/languages?name=java
+```http
+GET http://localhost:{puerto}/languages?name={name}
+```
 
 ### Obtener la informacion de un lenguaje segun su paradigma de programacion:
 
-GET http://localhost:{puerto}/api/languages?paradigm=funcional
+```http
+GET http://localhost:{puerto}/languages?paradigm={paradigm}
+```
 
 ### Creacion de un nuevo recurso.
 
-POST http://localhost:{puerto}/api/languages
+```http
+POST http://localhost:{puerto}/languages
+```
 Content-Type: application/json
 
+```json
 {
-        "name": "Nombre del lenguaje",
-        "description": "Descripcion",
-        "authors": "Arreglo de autores", 
-        "year": año,
-        "paradigms": "Arreglo de paradigmas",
-        "logo": "Link del logo"
+  "name": "Nombre del lenguaje",
+  "description": "Descripción",
+  "authors": ["Autor 1", "Autor 2"],
+  "year": año,
+  "paradigms": ["Paradigma 1", "Paradigma 2"],
+  "logo": "Enlace del logo"
 }
+```
 
 ### Actualizar la informacion de un lenguaje:
 
-PATCH http://localhost:{puerto}/api/languages/dc0ae565-6b51-4618-8fe4-1df30738fa1b
+```http
+PATCH http://localhost:{puerto}/languages/:id
+```
 Content-Type: application/json
 
+```json
 {
-    "name": "Nombre actualizado.",
-    "description": "Descripcion actualizada..."
+  "name": "Nombre actualizado",
+  "description": "Descripción actualizada..."
 }
+```
 
 ### Eliminar un recurso mediante su id:
-DELETE  http://localhost:{puerto}/api/languages/a9f87c4b-8e6d-4f5e-9c27-3a78e4d2b309
+
+```http
+DELETE  http://localhost:{puerto}/languages/:id
+```
 
 Nota: Para probar la API podemos hacer uso de postman o de una extension de vscode llamada "REST Client" en mi caso yo la probe con la extension de vscode y dichas pruebas las podemos encontrar en el archivo llamado "api.http".
 
