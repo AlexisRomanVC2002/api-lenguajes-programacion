@@ -75,3 +75,5 @@ Nota: Para probar la API podemos hacer uso de postman o de una extension de vsco
 Ahora bien para probar la web solamente baste con abrirlo con cualquier servidor de web estaticas, como la famosa extension de vscode "Live Server".
 
 Nota: En caso de algun error agregar dentro de "/api/api.js" en la constante "ACCEPTED_ORIGINS" el origin desde donde se esta haciendo la solicitud debido a los CORS.
+
+![show_web](https://github.com/AlexisRomanVC2002/api-lenguajes-programacion/assets/90739340/aca7e9b4-5dec-499e-b567-84549bdf089d)
