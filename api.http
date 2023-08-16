@@ -1,17 +1,17 @@
 ### Obteniendo la informacion de todos los lenguajes ✔
-GET http://localhost:3000/api/languages
+GET http://localhost:3000/languages
 
 ### Obteniendo la informacion de un lenguaje con su id ✔
-GET http://localhost:3000/api/languages/a9f87c4b-8e6d-4f5e-9c27-3a78e4d2b309
+GET http://localhost:3000/languages/a9f87c4b-8e6d-4f5e-9c27-3a78e4d2b309
 
 ### Obteniendo la informacion de un lenguaje mediante su nombre ✔
-GET http://localhost:3000/api/languages?name=java
+GET http://localhost:3000/languages?name=python
 
 ### Obteniendo la informacion de un lenguaje segun su paradigma de programacion ✔
-GET http://localhost:3000/api/languages?paradigm=funcional
+GET http://localhost:3000/languages?paradigm=funcional
 
 ### Probando la creacion de un nuevo lenguaje de programacion ✔
-POST http://localhost:3000/api/languages
+POST http://localhost:3000/languages
 Content-Type: application/json
 
 {
@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ### Probando la actualizacion la informacion de un lenguaje ✔
-PATCH http://localhost:3000/api/languages/dc0ae565-6b51-4618-8fe4-1df30738fa1b
+PATCH http://localhost:3000/languages/a9f87c4b-8e6d-4f5e-9c27-3a78e4d2b309
 Content-Type: application/json
 
 {
@@ -33,4 +33,4 @@ Content-Type: application/json
 }
 
 ### Eliminando un lenguaje mediante su id. ✔
-DELETE  http://localhost:3000/api/languages/a9f87c4b-8e6d-4f5e-9c27-3a78e4d2b309
+DELETE  http://localhost:3000/languages/dc0ae565-6b51-4618-8fe4-1df30738fa1b

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const SECTION_LANGUAGES = document.querySelector("#section-languages");
-  const ENDPOINT_BASE = "http://localhost:3000/api";
+  const ENDPOINT_BASE = "http://localhost:3000";
 
   async function getLanguages() {
 

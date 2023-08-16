@@ -1,4 +1,4 @@
-const z = require("zod");
+import z from "zod";
 
 const languageSchema = z.object({
   name: z.string().min(1).max(20),
@@ -22,19 +22,14 @@ const languageSchema = z.object({
   logo: z.string().url("El logo deberia ser el enlace a la imagen del logo."),
 });
 
-function validateLanguage(input) {
+export function validateLanguage(input) {
   // safeParse retorna un obejeto de tipo -> { success: false; error: ZodError } || { success: true; data: 'billie' }
   return languageSchema.safeParse(input);
 }
 
-function validatePartialLanguage(input){
+export function validatePartialLanguage(input){
     // partial convierte todo el esquema como requisitos opcionales y en caso que tenga uno validarlo como es.
       // safeParse retorna un obejeto de tipo -> { success: false; error: ZodError } || { success: true; data: 'billie' }
     return languageSchema.partial().safeParse(input);
 
 }
-
-module.exports = {
-  validateLanguage,
-  validatePartialLanguage
-};

@@ -1,6 +1,7 @@
 {
   "name": "api-programming-languages",
   "version": "1.0.0",
+  "type": "module",
   "description": "API sobre lenguajes de programacion",
   "main": "index.js",
   "scripts": {
